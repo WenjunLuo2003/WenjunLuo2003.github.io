@@ -1,16 +1,24 @@
 
 
-[![senli1073](https://img.shields.io/badge/senli1073-github-blue?logo=github)](https://github.com/senli1073)
+[![wenjunluo2003](https://img.shields.io/badge/wenjunluo2003-github-blue?logo=github)]([https://github.com/senli1073](https://wenjunluo2003.github.io/))
 
-He is currently pursuing a Master's Degree in Computer Science, at School of Computer Science and Technology, China University of Mining and Technology, China.
-
+I was born in 2003 in Yongxin County, Ji'an City, Jiangxi Province. I am currently pursuing a Bachelor's Degree in Mathematics at the South China University of Technology (SCUT), and will receive my Bachelor's Degree in 2025. After obtaining my Bachelor's Degree, I will go to the University of Macau to study for a PhD degree.
 #### Email
-15070693073@163.com
+202166321122@mail.scut.edu.cn; 15070693073@163.com
 
-#### Education
-M.E., Computer Science and Technology, China University of Mining and Technology, 2022—2025 (expected).\
-B.E., Data Science and Big Data Technology, China University of Mining and Technology, 2018—2022.
+#### Educations
+Ph.D. , Dept. of  Electromechanical Engineering, University de Macau, 2025.07—present.\
+B.E. , Informantion and Computation (Mathematics) , South China University of Technology (SCUT), 2021.09—2025.07.
 
 #### Research Interests
-Deep Learning, Artificial Intelligence Seismology, Mine Microseismic.
+- <b> Multi-Intelligence Collaborative Control </b>.<br>
+- <b> Safety Control</b>:<br>
+  Control Barrier Function, Model Predictive Control(MPC), etc.
+- <b> Data-driven model</b>:<br>
+  Koopman Operator, System Identificaiton, etc.
+- <b> Robot control</b>:<br>
+  Path Planning, Obstacle Avoidance, Multi-robot Coordination, Learning-based control, Sensor Fusion, etc.
+- <b> Unmanned Autonomous Systems</b>:<br>
+  Drones, Autonomous Vehicles or Quadruped Robots, etc.
+---
 
