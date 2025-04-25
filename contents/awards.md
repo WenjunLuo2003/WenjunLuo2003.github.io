@@ -1,13 +1,15 @@
-- National Scholarship of Graduate Student, 2024.
+- National Motivational Scholarship (2024).
 
-- First-prize Scholarship of CUMT, 2024.
+- Merit Student in South China University of Technology (2024).
 
-- First-prize Scholarship of CUMT, 2023.
+- The Fourth National Student Psychological Knowledge Contest(2024): First prize.
 
-- Freshman Scholarship of CUMT, 2022.
+- China Undergraduate Mathematical Contest in Modeling (2023):} Second Prize .
 
-- Excellent Graduation Project of Jiangsu Province, 2022.
+- Mathorcup University Mathematical Modeling Challenge(2023): <b>First prize</b>.
 
-- First-prize Enterprise Scholarship of CUMT, 2020.
+- American Collegiate Mathematical Modeling Contest(2023): S prize.
 
-- First-prize Scholarship of CUMT, 2019.
+- Reader's Cup Young People's Literature Competition(2022): <b>First prize</b>.
+
+- Scholarships (2022): South China University of Technology Scholarship.
