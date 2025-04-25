@@ -6,7 +6,7 @@ I was born in 2003 in Yongxin County, Ji'an City, Jiangxi Province. I am current
 #### Email
 202166321122@mail.scut.edu.cn; 15070693073@163.com
 
-#### Educations
+#### Education
 2025.07—Present, Ph.D. Dept. of  Electromechanical Engineering, University de Macau.\
 2021.09—2025.07, B.E. Dept. of Mathematics (Information and Computing Sciences), South China University of Technology (SCUT) .
 
