@@ -4,11 +4,11 @@
 
 I was born in 2003 in Yongxin County, Ji'an City, Jiangxi Province. I am currently pursuing a Bachelor's Degree in Mathematics at the South China University of Technology (SCUT), and will receive my Bachelor's Degree in 2025. After obtaining my Bachelor's Degree, I will go to the University of Macau to study for a PhD degree.
 #### Email
-202166321122@mail.scut.edu.cn; 15070693073@163.com
+202166321122@mail.scut.edu.cn; 15070693073@163.com.
 
 #### Education
-2025.07—Present, Ph.D. Dept. of  Electromechanical Engineering, University de Macau.\
-2021.09—2025.07, B.E. Dept. of Mathematics (Information and Computing Sciences), South China University of Technology (SCUT) .
+2025.08 — Present, Ph.D. Dept. of  Electromechanical Engineering, University de Macau.\
+2021.09 — 2025.07, B.E. Dept. of Mathematics (Information and Computing Sciences), South China University of Technology (SCUT) .
 
 #### Research Interests
 - <b> Multi-Intelligence Collaborative Control </b>.<br>
