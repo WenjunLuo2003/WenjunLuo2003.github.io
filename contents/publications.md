@@ -1,4 +1,4 @@
-[1] Peng Cheng, <b> Wenjun Luo </b> , Jiacheng Li, Chenjun Liu, Jason J. R. Liu, , Zhiguang Feng, "Fixed-Time Disturbance Observer-Based Prescribed Performance Control of Rigid Spacecraft", Accept\In press, 2024. <br>
+[1] Peng Cheng, <b> Wenjun Luo </b> , Jiacheng Li, Chenjun Liu, Jason J. R. Liu, , Zhiguang Feng, ["Fixed-Time Disturbance Observer-Based Prescribed Performance Control of Rigid Spacecraft"](10.1109/TAES.2025.3578288.), IEEE Transactions on Aerospace and Electronic Systems, 2025. <br>
 [2] Jiacheng Li, <b> Wenjun Luo </b>, Chenjun Liu, Jason J. R. Liu, James Lam, "Resilient Consensus for Networked Systems with  Hidden Nodes and Edges: Detection, Isolation, and  Control", Finished, 2024. <br>
 [3] Jiacheng Li,<b> Wenjun Luo</b>, Jason J. R. Liu, and James Lam, " Twin-Based Cyber-Security Control for Swarm with Aggregation–Dispersion Ability ", Accept\In press, 2025 (Conference).<br>
 [4] Peng Cheng,<b> Wenjun Luo </b>, Chenjun Liu, Jiacheng Li, Jason J. R. Liu, Dapeng Li, Yan-Jun Liu, "Event-Based Saturation-Tolerant Prescribed Control of Rigid Spacecraft With Actuator Faults", Submit for publication, 2024.  <br>
