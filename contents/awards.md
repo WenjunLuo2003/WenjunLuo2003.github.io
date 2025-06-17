@@ -4,7 +4,7 @@
 
 - The Fourth National Student Psychological Knowledge Contest(2024): First prize.
 
-- China Undergraduate Mathematical Contest in Modeling (2023):} Second Prize .
+- China Undergraduate Mathematical Contest in Modeling (2023): Second Prize .
 
 - Mathorcup University Mathematical Modeling Challenge(2023): <b>First prize</b>.
 
