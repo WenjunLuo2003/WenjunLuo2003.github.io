@@ -2,7 +2,8 @@
 
 [![wenjunluo2003](https://img.shields.io/badge/wenjunluo2003-github-blue?logo=github)]([https://github.com/senli1073](https://wenjunluo2003.github.io/))
 
-I was born in 2003 in Yongxin County, Ji'an City, Jiangxi Province. I am currently pursuing a Bachelor's Degree in Mathematics at the South China University of Technology (SCUT), and will receive my Bachelor's Degree in 2025. After obtaining my Bachelor's Degree, I will go to the University of Macau to study for a PhD degree.
+I was born in 2003 in Yongxin County, Ji'an City, Jiangxi Province. I received my Bachelor's Degree in Mathematics from South China University of Technology (SCUT), Guangzhou, China, in 2025, and I am currently pursuing my Ph.D. degree in Electromechanical Engineering with University of Macau, Macau, China.
+
 #### Email
 202166321122@mail.scut.edu.cn; 15070693073@163.com.
 
