@@ -9,7 +9,7 @@ I was born in 2003 in Yongxin County, Ji'an City, Jiangxi Province. I received m
 
 #### Education
 2025.08 — Present, Ph.D. Dept. of  Electromechanical Engineering, University de Macau.\
-2021.09 — 2025.07, B.S. Dept. of Mathematics (Information and Computing Sciences), South China University of Technology (SCUT) .
+2021.09 — 2025.07, B.Sc. Dept. of Mathematics (Information and Computing Sciences), South China University of Technology (SCUT) .
 
 #### Research Interests
 - <b> Multi-Intelligence Collaborative Control </b>.<br>
