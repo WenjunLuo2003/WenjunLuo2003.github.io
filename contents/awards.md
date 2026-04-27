@@ -1,3 +1,5 @@
+- Selected for the Young Doctoral Students Talent Support Program of the China Association for Science and Technology (2025).
+
 - National Motivational Scholarship (2024).
 
 - Merit Student in South China University of Technology (2024).
@@ -13,3 +15,4 @@
 - Reader's Cup Young People's Literature Competition(2022): <b>First prize</b>.
 
 - Scholarships (2022): South China University of Technology Scholarship.
+
