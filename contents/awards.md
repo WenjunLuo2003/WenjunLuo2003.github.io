@@ -1,3 +1,5 @@
+- The paper “Learning Discrete-Time Control Barrier Functions via RRT-Guided Sampling and Graph Neural Network” is a finalist for the Guan Zhao-Zhi Award in the 45th Chinese Control Conference (CCC2026).
+
 - Selected for the Young Doctoral Students Talent Support Program of the China Association for Science and Technology (2025).
 
 - National Motivational Scholarship (2024).
