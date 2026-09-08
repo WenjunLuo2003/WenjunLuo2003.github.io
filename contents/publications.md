@@ -9,5 +9,5 @@
 [9] Peng Cheng, <b> Wenjun Luo</b>, Jason J. R. Liu, Zhiguang Feng, ["Fixed-Time Fault-Tolerant Control of Saturated Spacecraft With Full-State Prescribed Performance"](https://doi.org/10.1109/TSMC.2026.3722910.), IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2026. <br>
 [10] Peng Cheng, <b> Wenjun Luo</b>, Jason J. R. Liu, "Predefined-Time Fault-Tolerant Constrained Control of Rigid Spacecraft Without Unwinding", Submit for publication, 2025. <br>
 [11] Jiacheng Li, <b>Wenjun Luo</b>, Jason J. R. Liu, James Lam, et al, " Cloud-Based Security Control for UAV Swarm Against Complex FDI Attacks: From Twin to Physical", Submit for publication, 2025. <br>
-[12] <b> Wenjun Luo</b>, Jason J. R. Liu, "Event-Triggered  Disturbance Rejection Taylor-Lagrange Control for Safety-Critical Systems", Finished, 2026. <br>
+[12] <b> Wenjun Luo</b>, Jason J. R. Liu, "Event-Triggered  Disturbance Rejection Taylor-Lagrange Control for Safety-Critical Systems", Submit for publication, 2026. <br>
 
