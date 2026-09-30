@@ -200,6 +200,38 @@ function setupCarousel() {
     startAutoplay();
 }
 
+function setupVisitorMap() {
+    const map = document.querySelector('[data-visitor-map]');
+    if (!map) return;
+
+    const status = document.querySelector('[data-visitor-map-status]');
+    const note = document.querySelector('[data-visitor-map-note]');
+    let fallbackApplied = false;
+
+    const showFallback = () => {
+        if (fallbackApplied || !map.dataset.fallbackSrc) return;
+        fallbackApplied = true;
+        map.src = map.dataset.fallbackSrc;
+        map.alt = 'World map preview shown while the live visitor service is unavailable';
+        if (status) status.textContent = 'Map preview';
+        if (note) {
+            note.innerHTML = 'The live visitor service could not be reached. <a href="https://info.flagcounter.com/vvfz" target="_blank" rel="noreferrer">Open visitor statistics <span aria-hidden="true">↗</span></a> for the latest data.';
+        }
+    };
+
+    const timeout = window.setTimeout(() => {
+        if (!map.complete || map.naturalWidth === 0) showFallback();
+    }, 8000);
+
+    map.addEventListener('load', () => window.clearTimeout(timeout), { once: true });
+    map.addEventListener('error', showFallback, { once: true });
+
+    if (map.complete) {
+        window.clearTimeout(timeout);
+        if (map.naturalWidth === 0) showFallback();
+    }
+}
+
 async function loadMarkdown(name) {
     const container = document.getElementById(`${name}-md`);
     if (!container) return;
@@ -275,6 +307,7 @@ function setupNavigation() {
 window.addEventListener('DOMContentLoaded', async () => {
     setupNavigation();
     setupCarousel();
+    setupVisitorMap();
 
     marked.use({ mangle: false, headerIds: false });
 

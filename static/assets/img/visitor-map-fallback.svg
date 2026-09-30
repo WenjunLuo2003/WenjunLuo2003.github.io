@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 375" role="img" aria-labelledby="title description">
+  <title id="title">World map preview</title>
+  <desc id="description">A stylized world map displayed while the live visitor map service is unavailable.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef3f1"/>
+      <stop offset="1" stop-color="#e4ece8"/>
+    </linearGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#547b78"/>
+      <stop offset="1" stop-color="#29545c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="375" fill="url(#background)"/>
+  <g fill="none" stroke="#bfcfca" stroke-width="1" opacity=".65">
+    <path d="M0 75h800M0 150h800M0 225h800M0 300h800"/>
+    <path d="M100 0v375M200 0v375M300 0v375M400 0v375M500 0v375M600 0v375M700 0v375"/>
+  </g>
+  <g fill="url(#land)" opacity=".9">
+    <path d="M88 89l37-27 54-3 34 17 35 4 20 24-17 18-32 3-10 18-30 6-12 28-25-4-14-25-25-10-24-27z"/>
+    <path d="M204 171l32 10 25 29 8 39-18 37-16 43-22-25 3-36-20-31-10-38z"/>
+    <path d="M331 91l35-22 46 9 25-10 35 15 26-6 35 17 44-4 45 24 43 11 27 31-24 19-44-4-29 18-31-4-20 17-25-18-41 1-24-25-35-1-15-23-32 2-19-22-27-7z"/>
+    <path d="M408 169l38 1 28 25 8 39-20 47-29 29-21-27-6-38-21-30 8-27z"/>
+    <path d="M621 252l31-18 47 9 24 28-16 24-39 12-38-13-20-23z"/>
+    <path d="M708 186l15-8 13 9-9 12-17-2zM745 205l8-3 7 8-8 7-10-5z"/>
+  </g>
+  <g fill="#a7582d">
+    <circle cx="214" cy="123" r="4"/>
+    <circle cx="395" cy="118" r="4"/>
+    <circle cx="525" cy="145" r="4"/>
+    <circle cx="659" cy="266" r="4"/>
+  </g>
+  <rect x="207" y="331" width="386" height="30" rx="15" fill="#fffefb" opacity=".92"/>
+  <text x="400" y="351" fill="#425e60" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Live visitor map temporarily unavailable · Open statistics for current data</text>
+</svg>
