@@ -424,17 +424,111 @@ button:focus-visible {
     border-radius: 4px;
 }
 
-.portrait {
+.portrait-carousel {
     position: relative;
     width: 90%;
-    height: auto;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: 46% 42%;
+    overflow: hidden;
     border: 7px solid rgba(255, 255, 255, 0.9);
     border-radius: 4px;
-    filter: saturate(0.9) contrast(1.02);
+    background: #0a2630;
     box-shadow: 0 34px 80px rgba(2, 14, 20, 0.4);
+}
+
+.carousel-track,
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    object-fit: cover;
+    object-position: 46% 42%;
+    opacity: 0;
+    filter: saturate(0.9) contrast(1.02);
+    pointer-events: none;
+    transform: scale(1.025);
+    transition: opacity 560ms ease, transform 800ms ease;
+}
+
+.carousel-slide.is-active {
+    z-index: 1;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.carousel-slide-contain {
+    object-fit: contain;
+    object-position: center;
+    background: #0a2630;
+}
+
+.carousel-slide-illustration {
+    object-position: 48% 38%;
+}
+
+.carousel-slide-podium {
+    object-position: 43% 44%;
+}
+
+.carousel-controls {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 3;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    background: rgba(6, 27, 34, 0.72);
+    backdrop-filter: blur(9px);
+}
+
+.carousel-button,
+.carousel-dot {
+    display: grid;
+    padding: 0;
+    color: #fff;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    place-items: center;
+}
+
+.carousel-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0.88rem;
+    transition: background 180ms ease;
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.76);
+    border-radius: 50%;
+    transition: background 180ms ease, transform 180ms ease;
+}
+
+.carousel-dot:hover,
+.carousel-dot.is-active {
+    background: #fff;
+    transform: scale(1.18);
 }
 
 .portrait-wrap figcaption {

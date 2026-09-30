@@ -77,6 +77,100 @@ function groupActivityCards(container) {
     if (count > 0) container.replaceChildren(fragment);
 }
 
+function setupCarousel() {
+    const carousel = document.querySelector('[data-carousel]');
+    if (!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const previousButton = carousel.querySelector('.carousel-previous');
+    const nextButton = carousel.querySelector('.carousel-next');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+    const captionKicker = document.querySelector('[data-carousel-kicker]');
+    const caption = document.querySelector('[data-carousel-caption]');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const dots = [];
+    let activeIndex = 0;
+    let timer = null;
+    let pointerInside = false;
+    let focusInside = false;
+
+    if (slides.length < 2 || !previousButton || !nextButton || !dotsContainer) return;
+
+    const stopAutoplay = () => {
+        if (timer) window.clearInterval(timer);
+        timer = null;
+    };
+
+    const startAutoplay = () => {
+        stopAutoplay();
+        if (reducedMotion.matches || document.hidden || pointerInside || focusInside) return;
+        timer = window.setInterval(() => showSlide(activeIndex + 1), 5600);
+    };
+
+    const showSlide = (index) => {
+        activeIndex = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, slideIndex) => {
+            const isActive = slideIndex === activeIndex;
+            slide.classList.toggle('is-active', isActive);
+            slide.setAttribute('aria-hidden', String(!isActive));
+            dots[slideIndex]?.classList.toggle('is-active', isActive);
+            dots[slideIndex]?.setAttribute('aria-current', isActive ? 'true' : 'false');
+        });
+
+        const activeSlide = slides[activeIndex];
+        if (captionKicker) captionKicker.textContent = activeSlide.dataset.kicker || '';
+        if (caption) caption.textContent = activeSlide.dataset.caption || '';
+    };
+
+    slides.forEach((slide, index) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot';
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Show photo ${index + 1} of ${slides.length}`);
+        dot.addEventListener('click', () => showSlide(index));
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+    });
+
+    previousButton.addEventListener('click', () => showSlide(activeIndex - 1));
+    nextButton.addEventListener('click', () => showSlide(activeIndex + 1));
+
+    carousel.addEventListener('keydown', (event) => {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        event.preventDefault();
+        showSlide(activeIndex + (event.key === 'ArrowRight' ? 1 : -1));
+    });
+
+    carousel.addEventListener('mouseenter', () => {
+        pointerInside = true;
+        stopAutoplay();
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        pointerInside = false;
+        startAutoplay();
+    });
+
+    carousel.addEventListener('focusin', () => {
+        focusInside = true;
+        stopAutoplay();
+    });
+
+    carousel.addEventListener('focusout', () => {
+        window.setTimeout(() => {
+            focusInside = carousel.contains(document.activeElement);
+            startAutoplay();
+        }, 0);
+    });
+
+    document.addEventListener('visibilitychange', startAutoplay);
+    reducedMotion.addEventListener?.('change', startAutoplay);
+
+    showSlide(0);
+    startAutoplay();
+}
+
 async function loadMarkdown(name) {
     const container = document.getElementById(`${name}-md`);
     if (!container) return;
@@ -143,6 +237,7 @@ function setupNavigation() {
 
 window.addEventListener('DOMContentLoaded', async () => {
     setupNavigation();
+    setupCarousel();
 
     marked.use({ mangle: false, headerIds: false });
 
