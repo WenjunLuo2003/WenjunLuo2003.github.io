@@ -1,4 +1,4 @@
-I am a Ph.D. student in Electromechanical Engineering at the University of Macau. My research explores how control theory, data-driven methods, and intelligent robotics can make autonomous systems safer, more resilient, and more capable of collaboration.
+I am a Ph.D. student in Electromechanical Engineering at the [University of Macau](https://www.um.edu.mo/). My research focuses on safety-critical control of autonomous systems, with an emphasis on control barrier functions, matrix control barrier functions, and learning-based methods, including deep learning and reinforcement learning.
 
 I received my B.Sc. in Mathematics (Information and Computing Sciences) from South China University of Technology in 2025. I was born in 2003 in Yongxin County, Ji'an, Jiangxi, China.
 
@@ -9,7 +9,7 @@ I received my B.Sc. in Mathematics (Information and Computing Sciences) from Sou
   </div>
   <div>
     <span>Affiliation</span>
-    <strong>University of Macau</strong>
+    <strong><a href="https://www.um.edu.mo/">University of Macau</a></strong>
   </div>
   <div>
     <span>Field</span>

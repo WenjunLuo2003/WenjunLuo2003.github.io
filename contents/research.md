@@ -1,16 +1,16 @@
-### Safe & Constrained Control
+### Control Barrier Functions
 
-Control barrier functions, model predictive control, prescribed-performance control, and safety-critical control under state and input constraints.
+Safety-critical control using control barrier functions, with an emphasis on discrete-time systems and safety constraints.
 
-### Multi-Agent Systems
+### Matrix Control Barrier Functions
 
-Collaborative control, resilient consensus, multi-robot coordination, and cyber-secure control for networked and swarm systems.
+Matrix control barrier functions for structured safety guarantees in multivariable and interconnected dynamical systems.
 
-### Data-Driven Modeling
+### Learning for Safe Control
 
-Koopman operators, system identification, graph neural networks, and learning-based control methods that connect data with system structure.
+Deep learning, reinforcement learning, and graph neural networks for learning safety certificates and control policies.
 
-### Autonomous Robotics
+### Unmanned Autonomous Systems
 
-Path planning, obstacle avoidance, sensor fusion, and coordinated control for drones, autonomous vehicles, and quadruped robots.
+Safety assurance, obstacle avoidance, and coordinated control for unmanned vehicles, robotic systems, and multi-agent platforms.
 
