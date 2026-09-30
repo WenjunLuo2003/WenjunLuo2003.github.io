@@ -1,4 +1,4 @@
-### Journal Articles
+### Peer-reviewed journal articles
 
 1. <span class="pub-status">Journal · 2026</span> Jiacheng Li, **Wenjun Luo**, Chenjun Liu, Jason J. R. Liu, Dengxiu Yu, and Yanjun Liu. “Resilient Consensus for Networked Systems with Hidden Nodes and Edges: Detection, Isolation, and Control.” *IEEE Transactions on Signal and Information Processing over Networks*, 2026. [DOI ↗](https://doi.org/10.1109/TSIPN.2026.3707443)
 
@@ -12,19 +12,20 @@
 
 6. <span class="pub-status">Journal · 2025</span> Peng Cheng, **Wenjun Luo**, Jason J. R. Liu, and Zhiguang Feng. “Dynamic Event-Triggered Fault-Tolerant Control of Rigid Spacecraft With Prescribed Performance.” *ISA Transactions*, 2025. [DOI ↗](https://doi.org/10.1016/j.isatra.2025.10.045)
 
-### Conference Papers
+### Conference papers
 
-1. <span class="pub-status">Accepted · 2026</span> **Wenjun Luo**, Zhiyuan Zhang, Jason J. R. Liu, and James Lam. “Learning Discrete-Time Control Barrier Functions via RRT-Guided Sampling and Graph Neural Network.” Accepted / in press, 2026.
+1. <span class="pub-status">Accepted · 2026</span> **Wenjun Luo**, Zhiyuan Zhang, Jason J. R. Liu, and James Lam. “Learning Discrete-Time Control Barrier Functions via RRT-Guided Sampling and Graph Neural Network.” Accepted / in press, 2026. [Demo ↗](https://www.youtube.com/watch?v=p3rQo7z8Sbg)
 
 2. <span class="pub-status">Accepted · 2026</span> Wenjie Zhou, Jiacheng Li, **Wenjun Luo**, Zhiyuan Zhang, Jason J. R. Liu, and James Lam. “An Improved APF Method for UAV Formation Control in Sudden Obstacle Environments.” Accepted / in press, 2026.
 
 3. <span class="pub-status">Conference · 2025</span> Jiacheng Li, **Wenjun Luo**, Jason J. R. Liu, and James Lam. “Twin-Based Cyber-Security Control for Swarm With Aggregation–Dispersion Ability.” *2025 37th Chinese Control and Decision Conference (CCDC)*, 2025. [DOI ↗](https://doi.org/10.1109/CCDC65474.2025.11090519)
 
-### Manuscripts Under Review
+### Manuscripts under review
 
 1. <span class="pub-status">Submitted · 2026</span> **Wenjun Luo**, Jiacheng Li, Zhiyuan Zhang, Jason J. R. Liu, Housheng Su, and Zhan Su. “Event-Triggered Disturbance Rejection Taylor-Lagrange Control for Safety-Critical Systems.” Submitted for publication, 2026.
 
 2. <span class="pub-status">Submitted · 2025</span> Peng Cheng, **Wenjun Luo**, Jason J. R. Liu, and Zhiguang Feng. “Predefined-Time Fault-Tolerant Constrained Control of Rigid Spacecraft Without Unwinding.” Submitted for publication, 2025.
 
 3. <span class="pub-status">Submitted · 2025</span> Jiacheng Li, **Wenjun Luo**, Jason J. R. Liu, James Lam, et al. “Cloud-Based Security Control for UAV Swarm Against Complex FDI Attacks: From Twin to Physical.” Submitted for publication, 2025.
+
 
