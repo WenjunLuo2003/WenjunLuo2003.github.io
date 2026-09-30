@@ -150,7 +150,16 @@ window.addEventListener('DOMContentLoaded', async () => {
     await Promise.allSettled(tasks);
 
     if (window.MathJax?.typesetPromise) {
-        window.MathJax.typesetPromise().catch((error) => console.error(error));
+        try {
+            await window.MathJax.typesetPromise();
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    const initialTarget = document.getElementById(window.location.hash.slice(1));
+    if (initialTarget) {
+        window.requestAnimationFrame(() => initialTarget.scrollIntoView({ block: 'start' }));
     }
 });
 
