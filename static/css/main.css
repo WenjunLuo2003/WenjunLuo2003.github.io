@@ -523,6 +523,14 @@ button:focus-visible {
     background: rgba(255, 255, 255, 0.16);
 }
 
+.carousel-button[hidden] {
+    display: none;
+}
+
+.carousel-toggle {
+    font-size: 0.72rem;
+}
+
 .carousel-dots {
     display: flex;
     gap: 6px;
@@ -1387,6 +1395,7 @@ button:focus-visible {
     .site-header,
     .hero-actions,
     .contact-section,
+    .visitor-map-section,
     .site-footer {
         display: none;
     }
@@ -1417,5 +1426,4 @@ button:focus-visible {
         display: none;
     }
 }
-
 

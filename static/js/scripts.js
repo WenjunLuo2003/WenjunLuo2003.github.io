@@ -84,6 +84,9 @@ function setupCarousel() {
     const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
     const previousButton = carousel.querySelector('.carousel-previous');
     const nextButton = carousel.querySelector('.carousel-next');
+    const toggleButton = carousel.querySelector('.carousel-toggle');
+    const toggleIcon = carousel.querySelector('[data-carousel-toggle-icon]');
+    const status = carousel.querySelector('[data-carousel-status]');
     const dotsContainer = carousel.querySelector('.carousel-dots');
     const preview = document.querySelector('[data-carousel-preview]');
     const captionKicker = document.querySelector('[data-carousel-kicker]');
@@ -94,8 +97,9 @@ function setupCarousel() {
     let timer = null;
     let pointerInside = false;
     let focusInside = false;
+    let autoplayPaused = false;
 
-    if (slides.length < 2 || !previousButton || !nextButton || !dotsContainer) return;
+    if (slides.length < 2 || !previousButton || !nextButton || !toggleButton || !dotsContainer) return;
 
     const stopAutoplay = () => {
         if (timer) window.clearInterval(timer);
@@ -104,11 +108,17 @@ function setupCarousel() {
 
     const startAutoplay = () => {
         stopAutoplay();
-        if (reducedMotion.matches || document.hidden || pointerInside || focusInside) return;
+        if (autoplayPaused || reducedMotion.matches || document.hidden || pointerInside || focusInside) return;
         timer = window.setInterval(() => showSlide(activeIndex + 1), 5600);
     };
 
-    const showSlide = (index) => {
+    const updateAutoplayControl = () => {
+        toggleButton.hidden = reducedMotion.matches;
+        toggleButton.setAttribute('aria-label', autoplayPaused ? 'Play slideshow' : 'Pause slideshow');
+        if (toggleIcon) toggleIcon.textContent = autoplayPaused ? '▶' : 'Ⅱ';
+    };
+
+    const showSlide = (index, announce = false) => {
         activeIndex = (index + slides.length) % slides.length;
 
         slides.forEach((slide, slideIndex) => {
@@ -127,6 +137,9 @@ function setupCarousel() {
             preview.src = nextSlide.currentSrc || nextSlide.src;
             preview.style.objectPosition = window.getComputedStyle(nextSlide).objectPosition;
         }
+        if (announce && status) {
+            status.textContent = `Photo ${activeIndex + 1} of ${slides.length}: ${activeSlide.alt}`;
+        }
     };
 
     slides.forEach((slide, index) => {
@@ -134,18 +147,24 @@ function setupCarousel() {
         dot.className = 'carousel-dot';
         dot.type = 'button';
         dot.setAttribute('aria-label', `Show photo ${index + 1} of ${slides.length}`);
-        dot.addEventListener('click', () => showSlide(index));
+        dot.addEventListener('click', () => showSlide(index, true));
         dotsContainer.appendChild(dot);
         dots.push(dot);
     });
 
-    previousButton.addEventListener('click', () => showSlide(activeIndex - 1));
-    nextButton.addEventListener('click', () => showSlide(activeIndex + 1));
+    previousButton.addEventListener('click', () => showSlide(activeIndex - 1, true));
+    nextButton.addEventListener('click', () => showSlide(activeIndex + 1, true));
+    toggleButton.addEventListener('click', () => {
+        autoplayPaused = !autoplayPaused;
+        updateAutoplayControl();
+        if (autoplayPaused) stopAutoplay();
+        else startAutoplay();
+    });
 
     carousel.addEventListener('keydown', (event) => {
         if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
         event.preventDefault();
-        showSlide(activeIndex + (event.key === 'ArrowRight' ? 1 : -1));
+        showSlide(activeIndex + (event.key === 'ArrowRight' ? 1 : -1), true);
     });
 
     carousel.addEventListener('mouseenter', () => {
@@ -171,8 +190,12 @@ function setupCarousel() {
     });
 
     document.addEventListener('visibilitychange', startAutoplay);
-    reducedMotion.addEventListener?.('change', startAutoplay);
+    reducedMotion.addEventListener?.('change', () => {
+        updateAutoplayControl();
+        startAutoplay();
+    });
 
+    updateAutoplayControl();
     showSlide(0);
     startAutoplay();
 }
@@ -188,6 +211,11 @@ async function loadMarkdown(name) {
         container.innerHTML = marked.parse(await response.text(), {
             mangle: false,
             headerIds: false
+        });
+
+        container.querySelectorAll('a[href^="http"]').forEach((link) => {
+            link.target = '_blank';
+            link.rel = 'noreferrer';
         });
 
         if (name === 'research') groupResearchCards(container);
@@ -232,7 +260,10 @@ function setupNavigation() {
             entries.forEach((entry) => {
                 if (!entry.isIntersecting) return;
                 links.forEach((link) => {
-                    link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`);
+                    const isActive = link.getAttribute('href') === `#${entry.target.id}`;
+                    link.classList.toggle('is-active', isActive);
+                    if (isActive) link.setAttribute('aria-current', 'location');
+                    else link.removeAttribute('aria-current');
                 });
             });
         }, { rootMargin: '-30% 0px -60% 0px' });
@@ -250,18 +281,9 @@ window.addEventListener('DOMContentLoaded', async () => {
     const tasks = [loadConfig(), ...sectionNames.map(loadMarkdown)];
     await Promise.allSettled(tasks);
 
-    if (window.MathJax?.typesetPromise) {
-        try {
-            await window.MathJax.typesetPromise();
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
     const initialTarget = document.getElementById(window.location.hash.slice(1));
     if (initialTarget) {
         window.requestAnimationFrame(() => initialTarget.scrollIntoView({ block: 'start' }));
     }
 });
-
 
