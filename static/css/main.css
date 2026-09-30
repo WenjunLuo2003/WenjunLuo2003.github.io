@@ -631,6 +631,113 @@ button:focus-visible {
     font-size: 0.9rem;
 }
 
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.activity-card {
+    position: relative;
+    min-height: 370px;
+    padding: clamp(30px, 4vw, 48px);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    box-shadow: 0 18px 48px rgba(24, 50, 46, 0.06);
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.activity-card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4px;
+    content: "";
+    background: linear-gradient(90deg, var(--accent), #d8a170 58%, transparent);
+}
+
+.activity-card:hover {
+    border-color: #ccd8d2;
+    box-shadow: 0 24px 58px rgba(24, 50, 46, 0.1);
+    transform: translateY(-4px);
+}
+
+.activity-card-number {
+    display: block;
+    margin-bottom: 40px;
+    color: var(--accent);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.activity-card h3 {
+    max-width: 540px;
+    margin: 0 0 18px;
+    font-family: var(--serif);
+    font-size: clamp(1.7rem, 2.7vw, 2.35rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+}
+
+.activity-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin: 0 0 22px;
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+}
+
+.activity-meta span + span {
+    position: relative;
+}
+
+.activity-meta span + span::before {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 3px;
+    height: 3px;
+    content: "";
+    background: currentColor;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.activity-role {
+    margin: 0 0 10px;
+    color: var(--ink);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.activity-card > p:not(.activity-meta, .activity-role) {
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-size: 0.91rem;
+}
+
+.activity-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-dark);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration-color: rgba(21, 63, 73, 0.3);
+    text-transform: uppercase;
+}
+
 .timeline > h3 {
     margin: 0;
     color: var(--accent);
@@ -990,7 +1097,8 @@ button:focus-visible {
     }
 
     .profile-meta,
-    .research-grid {
+    .research-grid,
+    .activities-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1057,4 +1165,5 @@ button:focus-visible {
         display: none;
     }
 }
+
 
