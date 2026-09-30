@@ -85,6 +85,7 @@ function setupCarousel() {
     const previousButton = carousel.querySelector('.carousel-previous');
     const nextButton = carousel.querySelector('.carousel-next');
     const dotsContainer = carousel.querySelector('.carousel-dots');
+    const preview = document.querySelector('[data-carousel-preview]');
     const captionKicker = document.querySelector('[data-carousel-kicker]');
     const caption = document.querySelector('[data-carousel-caption]');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -119,8 +120,13 @@ function setupCarousel() {
         });
 
         const activeSlide = slides[activeIndex];
+        const nextSlide = slides[(activeIndex + 1) % slides.length];
         if (captionKicker) captionKicker.textContent = activeSlide.dataset.kicker || '';
         if (caption) caption.textContent = activeSlide.dataset.caption || '';
+        if (preview) {
+            preview.src = nextSlide.currentSrc || nextSlide.src;
+            preview.style.objectPosition = window.getComputedStyle(nextSlide).objectPosition;
+        }
     };
 
     slides.forEach((slide, index) => {
