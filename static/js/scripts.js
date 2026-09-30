@@ -1,6 +1,6 @@
 const contentDirectory = 'contents/';
 const configFile = 'config.yml';
-const sectionNames = ['home', 'research', 'education', 'publications', 'awards'];
+const sectionNames = ['home', 'research', 'education', 'activities', 'publications', 'awards'];
 
 function setConfigValue(key, value) {
     const element = document.getElementById(key);
@@ -51,6 +51,32 @@ function groupResearchCards(container) {
     if (count > 0) container.replaceChildren(fragment);
 }
 
+function groupActivityCards(container) {
+    const children = Array.from(container.children);
+    const fragment = document.createDocumentFragment();
+    let card = null;
+    let count = 0;
+
+    children.forEach((child) => {
+        if (child.tagName === 'H3') {
+            count += 1;
+            card = document.createElement('article');
+            card.className = 'activity-card';
+
+            const number = document.createElement('span');
+            number.className = 'activity-card-number';
+            number.textContent = String(count).padStart(2, '0');
+
+            card.append(number, child);
+            fragment.appendChild(card);
+        } else if (card) {
+            card.appendChild(child);
+        }
+    });
+
+    if (count > 0) container.replaceChildren(fragment);
+}
+
 async function loadMarkdown(name) {
     const container = document.getElementById(`${name}-md`);
     if (!container) return;
@@ -65,6 +91,7 @@ async function loadMarkdown(name) {
         });
 
         if (name === 'research') groupResearchCards(container);
+        if (name === 'activities') groupActivityCards(container);
     } catch (error) {
         console.error(error);
         container.innerHTML = '<p>Content is temporarily unavailable.</p>';
@@ -126,4 +153,5 @@ window.addEventListener('DOMContentLoaded', async () => {
         window.MathJax.typesetPromise().catch((error) => console.error(error));
     }
 });
+
 
