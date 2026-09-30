@@ -1,20 +1,20 @@
-- The paper “Learning Discrete-Time Control Barrier Functions via RRT-Guided Sampling and Graph Neural Network” is a finalist for the Guan Zhao-Zhi Award in the 45th Chinese Control Conference (CCC2026).
+- **Guan Zhao-Zhi Award Finalist**, 45th Chinese Control Conference (CCC 2026), for “Learning Discrete-Time Control Barrier Functions via RRT-Guided Sampling and Graph Neural Network.”
 
-- Selected for the Young Doctoral Students Talent Support Program of the China Association for Science and Technology (2025).
+- **Young Doctoral Students Talent Support Program**, China Association for Science and Technology, 2025.
 
-- National Motivational Scholarship (2024).
+- **National Motivational Scholarship**, 2024.
 
-- Merit Student in South China University of Technology (2024).
+- **Merit Student**, South China University of Technology, 2024.
 
-- The Fourth National Student Psychological Knowledge Contest(2024): First prize.
+- **First Prize**, Fourth National Student Psychological Knowledge Contest, 2024.
 
-- China Undergraduate Mathematical Contest in Modeling (2023): Second Prize .
+- **Second Prize**, China Undergraduate Mathematical Contest in Modeling, 2023.
 
-- Mathorcup University Mathematical Modeling Challenge(2023): <b>First prize</b>.
+- **First Prize**, MathorCup University Mathematical Modeling Challenge, 2023.
 
-- American Collegiate Mathematical Modeling Contest(2023): S prize.
+- **S Prize**, Mathematical Contest in Modeling (MCM), 2023.
 
-- Reader's Cup Young People's Literature Competition(2022): <b>First prize</b>.
+- **First Prize**, Reader's Cup Young People's Literature Competition, 2022.
 
-- Scholarships (2022): South China University of Technology Scholarship.
+- **South China University of Technology Scholarship**, 2022.
 

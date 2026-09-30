@@ -1,65 +1,129 @@
+const contentDirectory = 'contents/';
+const configFile = 'config.yml';
+const sectionNames = ['home', 'research', 'education', 'publications', 'awards'];
 
+function setConfigValue(key, value) {
+    const element = document.getElementById(key);
+    if (!element) return;
 
-const content_dir = 'contents/'
-const config_file = 'config.yml'
-const section_names = ['home', 'publications', 'awards']
+    element.textContent = value;
 
+    if (key === 'title') document.title = value;
+    if (key === 'email') {
+        element.setAttribute('href', `mailto:${value}`);
+    }
+}
 
-window.addEventListener('DOMContentLoaded', event => {
+async function loadConfig() {
+    const response = await fetch(contentDirectory + configFile);
+    if (!response.ok) throw new Error(`Unable to load ${configFile}`);
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    };
+    const config = jsyaml.load(await response.text());
+    Object.entries(config).forEach(([key, value]) => setConfigValue(key, value));
 
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
+    const emailLink = document.getElementById('primary-email-link');
+    if (emailLink && config.email) emailLink.href = `mailto:${config.email}`;
+}
+
+function groupResearchCards(container) {
+    const children = Array.from(container.children);
+    const fragment = document.createDocumentFragment();
+    let card = null;
+    let count = 0;
+
+    children.forEach((child) => {
+        if (child.tagName === 'H3') {
+            count += 1;
+            card = document.createElement('article');
+            card.className = 'research-card';
+
+            const number = document.createElement('span');
+            number.className = 'research-card-number';
+            number.textContent = String(count).padStart(2, '0');
+
+            card.append(number, child);
+            fragment.appendChild(card);
+        } else if (card) {
+            card.appendChild(child);
+        }
     });
 
+    if (count > 0) container.replaceChildren(fragment);
+}
 
-    // Yaml
-    fetch(content_dir + config_file)
-        .then(response => response.text())
-        .then(text => {
-            const yml = jsyaml.load(text);
-            Object.keys(yml).forEach(key => {
-                try {
-                    document.getElementById(key).innerHTML = yml[key];
-                } catch {
-                    console.log("Unknown id and value: " + key + "," + yml[key].toString())
-                }
+async function loadMarkdown(name) {
+    const container = document.getElementById(`${name}-md`);
+    if (!container) return;
 
-            })
-        })
-        .catch(error => console.log(error));
+    try {
+        const response = await fetch(`${contentDirectory}${name}.md`);
+        if (!response.ok) throw new Error(`Unable to load ${name}.md`);
 
+        container.innerHTML = marked.parse(await response.text(), {
+            mangle: false,
+            headerIds: false
+        });
 
-    // Marked
-    marked.use({ mangle: false, headerIds: false })
-    section_names.forEach((name, idx) => {
-        fetch(content_dir + name + '.md')
-            .then(response => response.text())
-            .then(markdown => {
-                const html = marked.parse(markdown);
-                document.getElementById(name + '-md').innerHTML = html;
-            }).then(() => {
-                // MathJax
-                MathJax.typeset();
-            })
-            .catch(error => console.log(error));
-    })
+        if (name === 'research') groupResearchCards(container);
+    } catch (error) {
+        console.error(error);
+        container.innerHTML = '<p>Content is temporarily unavailable.</p>';
+    }
+}
 
-}); 
+function setupNavigation() {
+    const header = document.getElementById('mainNav');
+    const toggle = document.querySelector('.nav-toggle');
+    const navigation = document.getElementById('primary-navigation');
+    const links = Array.from(navigation.querySelectorAll('a[href^="#"]'));
+
+    const closeNavigation = () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        navigation.classList.remove('is-open');
+        document.body.classList.remove('nav-open');
+    };
+
+    toggle.addEventListener('click', () => {
+        const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+        navigation.classList.toggle('is-open', !isOpen);
+        document.body.classList.toggle('nav-open', !isOpen);
+    });
+
+    links.forEach((link) => link.addEventListener('click', closeNavigation));
+
+    const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 12);
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+
+    const sections = links
+        .map((link) => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                links.forEach((link) => {
+                    link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`);
+                });
+            });
+        }, { rootMargin: '-30% 0px -60% 0px' });
+
+        sections.forEach((section) => observer.observe(section));
+    }
+}
+
+window.addEventListener('DOMContentLoaded', async () => {
+    setupNavigation();
+
+    marked.use({ mangle: false, headerIds: false });
+
+    const tasks = [loadConfig(), ...sectionNames.map(loadMarkdown)];
+    await Promise.allSettled(tasks);
+
+    if (window.MathJax?.typesetPromise) {
+        window.MathJax.typesetPromise().catch((error) => console.error(error));
+    }
+});
+
