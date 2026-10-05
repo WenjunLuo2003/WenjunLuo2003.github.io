@@ -215,13 +215,13 @@ function setupVisitorMap() {
         map.alt = 'World map preview shown while the live visitor service is unavailable';
         if (status) status.textContent = 'Map preview';
         if (note) {
-            note.innerHTML = 'The live visitor service could not be reached. <a href="https://info.flagcounter.com/vvfz" target="_blank" rel="noreferrer">Open visitor statistics <span aria-hidden="true">↗</span></a> for the latest data.';
+            note.innerHTML = 'The live visitor service could not be reached. <a href="https://www.visitordots.com/details/vd_ODBZ0Vr0roTYcU-nChxv2kq-" target="_blank" rel="noreferrer">Open visitor statistics <span aria-hidden="true">↗</span></a> for the latest data.';
         }
     };
 
     const timeout = window.setTimeout(() => {
         if (!map.complete || map.naturalWidth === 0) showFallback();
-    }, 8000);
+    }, 15000);
 
     map.addEventListener('load', () => window.clearTimeout(timeout), { once: true });
     map.addEventListener('error', showFallback, { once: true });
