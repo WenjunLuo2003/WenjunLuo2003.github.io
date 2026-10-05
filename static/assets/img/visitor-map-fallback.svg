@@ -24,12 +24,6 @@
     <path d="M621 252l31-18 47 9 24 28-16 24-39 12-38-13-20-23z"/>
     <path d="M708 186l15-8 13 9-9 12-17-2zM745 205l8-3 7 8-8 7-10-5z"/>
   </g>
-  <g fill="#a7582d">
-    <circle cx="214" cy="123" r="4"/>
-    <circle cx="395" cy="118" r="4"/>
-    <circle cx="525" cy="145" r="4"/>
-    <circle cx="659" cy="266" r="4"/>
-  </g>
   <rect x="207" y="331" width="386" height="30" rx="15" fill="#fffefb" opacity=".92"/>
   <text x="400" y="351" fill="#425e60" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Live visitor map temporarily unavailable · Open statistics for current data</text>
 </svg>
