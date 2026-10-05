@@ -232,6 +232,18 @@ function setupVisitorMap() {
     }
 }
 
+function setupVisitorInsights() {
+    const countryDetails = document.querySelector('[data-visitor-flags]');
+    const flagImage = countryDetails?.querySelector('[data-visitor-flags-image]');
+    if (!countryDetails || !flagImage) return;
+
+    countryDetails.addEventListener('toggle', () => {
+        if (countryDetails.open && !flagImage.src && flagImage.dataset.src) {
+            flagImage.src = flagImage.dataset.src;
+        }
+    });
+}
+
 async function loadMarkdown(name) {
     const container = document.getElementById(`${name}-md`);
     if (!container) return;
@@ -308,6 +320,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     setupNavigation();
     setupCarousel();
     setupVisitorMap();
+    setupVisitorInsights();
 
     marked.use({ mangle: false, headerIds: false });
 

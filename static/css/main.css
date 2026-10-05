@@ -1202,6 +1202,132 @@ button:focus-visible {
     font-weight: 700;
 }
 
+.visitor-insights {
+    display: grid;
+    max-width: 800px;
+    padding-top: 24px;
+    margin: 24px auto 0;
+    grid-template-columns: minmax(250px, 0.72fr) minmax(0, 1.28fr);
+    gap: 16px;
+    border-top: 1px solid var(--line);
+}
+
+.visitor-insight-card {
+    min-width: 0;
+    padding: 20px;
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    background: var(--canvas);
+}
+
+.visitor-insight-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 15px;
+}
+
+.visitor-insight-heading p,
+.visitor-country-card strong {
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.visitor-insight-heading span {
+    color: #4d8b72;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.visitor-counter-widget {
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    background: #fff;
+}
+
+.visitor-counter-widget img {
+    width: 100%;
+    height: auto;
+}
+
+.visitor-country-card summary {
+    display: flex;
+    min-height: 96px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.visitor-country-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.visitor-country-card summary > span:first-child {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.visitor-country-card small {
+    color: var(--muted);
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+.visitor-details-icon {
+    display: grid;
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    color: var(--accent-dark);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--paper);
+    font-size: 1rem;
+    place-items: center;
+    transition: transform 180ms ease;
+}
+
+.visitor-country-card[open] .visitor-details-icon {
+    transform: rotate(45deg);
+}
+
+.visitor-flags-panel {
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+}
+
+.visitor-flags-panel a,
+.visitor-flags-panel img {
+    display: block;
+    width: 100%;
+}
+
+.visitor-flags-panel img {
+    height: auto;
+    min-height: 84px;
+    background: #fff;
+}
+
+.visitor-flags-panel p {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 0.67rem;
+}
+
 .site-footer {
     padding: 28px 0;
     color: #80908c;
@@ -1413,6 +1539,10 @@ button:focus-visible {
         align-items: flex-start;
         flex-direction: column;
         gap: 12px;
+    }
+
+    .visitor-insights {
+        grid-template-columns: 1fr;
     }
 
     .footer-inner {
