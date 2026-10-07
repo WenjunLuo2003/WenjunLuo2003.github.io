@@ -976,6 +976,113 @@ button:focus-visible {
     vertical-align: 0.12em;
 }
 
+@media (min-width: 901px) {
+    .service-heading {
+        position: sticky;
+        top: calc(var(--header-height) + 40px);
+        align-self: start;
+    }
+}
+
+.review-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 48px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--line);
+    gap: 1px;
+}
+
+.review-summary > div {
+    padding: 24px;
+    background: var(--paper);
+}
+
+.review-summary strong,
+.review-summary span {
+    display: block;
+}
+
+.review-summary strong {
+    color: var(--accent-dark);
+    font-family: var(--serif);
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    line-height: 1;
+}
+
+.review-summary span {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.service-content h3 {
+    margin: 0 0 24px;
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.review-journal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.review-journal {
+    display: flex;
+    min-height: 150px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.66);
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.review-journal:hover {
+    border-color: #c8d4cf;
+    background: var(--paper);
+    transform: translateY(-2px);
+}
+
+.review-journal-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    color: var(--accent);
+    font-size: 0.63rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.review-journal h4 {
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: clamp(1.12rem, 1.8vw, 1.42rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.service-source {
+    padding-top: 22px;
+    margin: 28px 0 0;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.74rem;
+    line-height: 1.7;
+}
+
 .awards-list ul {
     padding: 0;
     margin: 0;
@@ -1518,7 +1625,12 @@ button:focus-visible {
 
     .profile-meta,
     .research-grid,
-    .activities-grid {
+    .activities-grid,
+    .review-journal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-summary {
         grid-template-columns: 1fr;
     }
 

@@ -1,6 +1,6 @@
 const contentDirectory = 'contents/';
 const configFile = 'config.yml';
-const sectionNames = ['home', 'research', 'education', 'activities', 'publications', 'awards'];
+const sectionNames = ['home', 'research', 'education', 'activities', 'publications', 'service', 'awards'];
 
 function setConfigValue(key, value) {
     const element = document.getElementById(key);
