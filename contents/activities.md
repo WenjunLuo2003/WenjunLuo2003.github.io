@@ -1,3 +1,13 @@
+### Hong Kong–Macao Science and Technology Exchange Visit to Xinjiang
+
+<p class="activity-meta"><span>October 12–16, 2026</span><span>Urumqi &amp; Shihezi, China</span></p>
+
+<p class="activity-role">Exchange participant</p>
+
+Joined a Hong Kong–Macao delegation for research and industry exchanges in Xinjiang, visiting Xinjiang University, Shihezi University, and technology enterprises. The program explored artificial intelligence, the Internet of Things, renewable energy, and smart agriculture through academic discussions and site visits.
+
+<a class="activity-link" href="https://appimg.modaily.cn/amucsite/web/index.html#/detail/9991400" target="_blank" rel="noreferrer">Macau Daily coverage <span aria-hidden="true">↗</span></a>
+
 ### 45th Chinese Control Conference · CCC 2026
 
 <p class="activity-meta"><span>July 27–29, 2026</span><span>Changsha, China</span></p>
