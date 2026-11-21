@@ -28,4 +28,6 @@
 
 3. <span class="pub-status">Submitted · 2025</span> Jiacheng Li, **Wenjun Luo**, Jason J. R. Liu, James Lam, et al. “Cloud-Based Security Control for UAV Swarm Against Complex FDI Attacks: From Twin to Physical.” Submitted for publication, 2025.
 
+### Manuscripts in preparation
 
+1. <span class="pub-status">Ready for submission · 2026</span> Shenghao Zhao, Jason J. R. Liu, **Wenjun Luo**, and Qiyu Li. “Matrix Control Barrier Functions: A Reduced-Order Model Approach.” Manuscript prepared for submission, 2026.
