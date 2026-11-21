@@ -249,12 +249,13 @@ async function loadMarkdown(name) {
     if (!container) return;
 
     try {
-        const response = await fetch(`${contentDirectory}${name}.md`);
+        const options = name === 'publications' ? { cache: 'no-cache' } : {};
+        const response = await fetch(`${contentDirectory}${name}.md`, options);
         if (!response.ok) throw new Error(`Unable to load ${name}.md`);
 
         container.innerHTML = marked.parse(await response.text(), {
             mangle: false,
-            headerIds: false
+            headerIds: name === 'publications'
         });
 
         container.querySelectorAll('a[href^="http"]').forEach((link) => {
