@@ -22,12 +22,14 @@
 
 ### Manuscripts under review
 
-1. <span class="pub-status">Submitted · 2026</span> **Wenjun Luo**, Jiacheng Li, Zhiyuan Zhang, Jason J. R. Liu, Housheng Su, and Zhan Su. “Event-Triggered Disturbance Rejection Taylor-Lagrange Control for Safety-Critical Systems.” Submitted for publication, 2026.
+1. <span class="pub-status">Under review · 2026</span> Zhengqi Deng, **Wenjun Luo**, Jiacheng Li, Zhiyuan Zhang, Bingyang Cheng, and Jason J. R. Liu. “Feasible-Space-Aware Control Barrier Functions for Safety-Critical Autonomous Systems.”
 
-2. <span class="pub-status">Submitted · 2025</span> Peng Cheng, **Wenjun Luo**, Jason J. R. Liu, and Zhiguang Feng. “Predefined-Time Fault-Tolerant Constrained Control of Rigid Spacecraft Without Unwinding.” Submitted for publication, 2025.
+2. <span class="pub-status">Submitted · 2026</span> **Wenjun Luo**, Jiacheng Li, Zhiyuan Zhang, Jason J. R. Liu, Housheng Su, and Zhan Su. “Event-Triggered Disturbance Rejection Taylor-Lagrange Control for Safety-Critical Systems.” Submitted for publication, 2026.
 
-3. <span class="pub-status">Submitted · 2025</span> Jiacheng Li, **Wenjun Luo**, Jason J. R. Liu, James Lam, et al. “Cloud-Based Security Control for UAV Swarm Against Complex FDI Attacks: From Twin to Physical.” Submitted for publication, 2025.
+3. <span class="pub-status">Submitted · 2025</span> Peng Cheng, **Wenjun Luo**, Jason J. R. Liu, and Zhiguang Feng. “Predefined-Time Fault-Tolerant Constrained Control of Rigid Spacecraft Without Unwinding.” Submitted for publication, 2025.
 
-### Manuscripts in preparation
+4. <span class="pub-status">Submitted · 2025</span> Jiacheng Li, **Wenjun Luo**, Jason J. R. Liu, James Lam, et al. “Cloud-Based Security Control for UAV Swarm Against Complex FDI Attacks: From Twin to Physical.” Submitted for publication, 2025.
 
-1. <span class="pub-status">Ready for submission · 2026</span> Shenghao Zhao, Jason J. R. Liu, **Wenjun Luo**, and Qiyu Li. “Matrix Control Barrier Functions: A Reduced-Order Model Approach.” Manuscript prepared for submission, 2026.
+### Manuscripts awaiting submission
+
+1. <span class="pub-status">Completed · 2026</span> Shenghao Zhao, Jason J. R. Liu, **Wenjun Luo**, and Qiyu Li. “Matrix Control Barrier Functions: A Reduced-Order Model Approach.”
