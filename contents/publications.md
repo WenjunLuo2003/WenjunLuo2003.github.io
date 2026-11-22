@@ -1,16 +1,16 @@
 ### Peer-reviewed journal articles
 
-1. <span class="pub-status">Journal · 2026</span> Jiacheng Li, **Wenjun Luo**, Chenjun Liu, Jason J. R. Liu, Dengxiu Yu, and Yanjun Liu. “Resilient Consensus for Networked Systems with Hidden Nodes and Edges: Detection, Isolation, and Control.” *IEEE Transactions on Signal and Information Processing over Networks*, 2026. [DOI ↗](https://doi.org/10.1109/TSIPN.2026.3707443)
+1. <span class="pub-status">Journal · 2026</span> Jiacheng Li, **Wenjun Luo**, Chenjun Liu, Jason J. R. Liu, Dengxiu Yu, and Yan-Jun Liu. “Resilient Consensus for Networked Systems with Hidden Nodes and Edges: Detection, Isolation, and Control.” *IEEE Transactions on Signal and Information Processing over Networks*, vol. 12, pp. 938–949, 2026. [DOI ↗](https://doi.org/10.1109/TSIPN.2026.3707443)
 
-2. <span class="pub-status">Journal · 2026</span> Peng Cheng, **Wenjun Luo**, Jason J. R. Liu, and Zhiguang Feng. “Fixed-Time Fault-Tolerant Control of Saturated Spacecraft With Full-State Prescribed Performance.” *IEEE Transactions on Systems, Man, and Cybernetics: Systems*, 2026. [DOI ↗](https://doi.org/10.1109/TSMC.2026.3722910)
+2. <span class="pub-status">Journal · 2026</span> Peng Cheng, **Wenjun Luo**, Jason J. R. Liu, and Zhiguang Feng. “Fixed-Time Fault-Tolerant Control of Saturated Spacecraft With Full-State Prescribed Performance.” *IEEE Transactions on Systems, Man, and Cybernetics: Systems*, vol. 56, no. 11, pp. 7139–7152, 2026. [DOI ↗](https://doi.org/10.1109/TSMC.2026.3722910)
 
 3. <span class="pub-status">Journal · 2026</span> Peng Cheng, **Wenjun Luo**, Jason J. R. Liu, and Zhiguang Feng. “Dynamic Event-Triggered Fault-Tolerant Control of Rigid Spacecraft With Prescribed Performance.” *ISA Transactions*, vol. 168, pp. 52–66, 2026. [DOI ↗](https://doi.org/10.1016/j.isatra.2025.10.045)
 
-4. <span class="pub-status">Journal · 2025</span> Peng Cheng, **Wenjun Luo**, Jiacheng Li, Chenjun Liu, Jason J. R. Liu, and Zhiguang Feng. “Fixed-Time Disturbance Observer-Based Prescribed Performance Control of Rigid Spacecraft.” *IEEE Transactions on Aerospace and Electronic Systems*, 2025. [DOI ↗](https://doi.org/10.1109/TAES.2025.3578288)
+4. <span class="pub-status">Journal · 2025</span> Peng Cheng, **Wenjun Luo**, Jiacheng Li, Chenjun Liu, Jason J. R. Liu, and Zhiguang Feng. “Fixed-Time Disturbance Observer-Based Prescribed Performance Control of Rigid Spacecraft.” *IEEE Transactions on Aerospace and Electronic Systems*, vol. 61, no. 5, pp. 13033–13045, 2025. [DOI ↗](https://doi.org/10.1109/TAES.2025.3578288)
 
-5. <span class="pub-status">Journal · 2025</span> Wenjie Zhou, Shuo Chen, Jiacheng Li, Chenjun Liu, **Wenjun Luo**, and Jason J. R. Liu. “Obstacle Avoidance Control for Cluster-Based Unmanned Aerial Vehicle Formation With Multiple Constraints.” *Franklin Open*, 2025. [DOI ↗](https://doi.org/10.1016/j.fraope.2025.100267)
+5. <span class="pub-status">Journal · 2025</span> Wenjie Zhou, Shuo Chen, Jiacheng Li, Chenjun Liu, **Wenjun Luo**, and Jason J. R. Liu. “Obstacle Avoidance Control for Cluster-Based Unmanned Aerial Vehicle Formation With Multiple Constraints.” *Franklin Open*, vol. 11, art. 100267, 2025. [DOI ↗](https://doi.org/10.1016/j.fraope.2025.100267)
 
-6. <span class="pub-status">Journal · 2025</span> Peng Cheng, **Wenjun Luo**, Chenjun Liu, Jiacheng Li, Jason J. R. Liu, Dapeng Li, and Yan-Jun Liu. “Event-Triggered Saturation-Tolerant Prescribed Control of Rigid Spacecraft With Actuator Faults.” *IEEE Transactions on Circuits and Systems I: Regular Papers*, 2025. [DOI ↗](https://doi.org/10.1109/TCSI.2025.3582878)
+6. <span class="pub-status">Journal · 2025</span> Peng Cheng, **Wenjun Luo**, Chenjun Liu, Jiacheng Li, Jason J. R. Liu, Dapeng Li, and Yan-Jun Liu. “Event-Triggered Saturation-Tolerant Prescribed Control of Rigid Spacecraft With Actuator Faults.” *IEEE Transactions on Circuits and Systems I: Regular Papers*, vol. 72, no. 12, pp. 8408–8420, 2025. [DOI ↗](https://doi.org/10.1109/TCSI.2025.3582878)
 
 ### Conference papers
 
@@ -18,7 +18,7 @@
 
 2. <span class="pub-status">Conference · 2026</span> Wenjie Zhou, Jiacheng Li, **Wenjun Luo**, Zhiyuan Zhang, and Jason J. R. Liu. “An Improved APF Method for UAV Formation Control in Unforeseen Dynamic Obstacle Environments.” *2026 15th Asian Control Conference (ASCC)*, pp. 875–880, 2026. [DOI ↗](https://doi.org/10.1109/ASCC70886.2026.11702181)
 
-3. <span class="pub-status">Conference · 2025</span> Jiacheng Li, **Wenjun Luo**, Jason J. R. Liu, and James Lam. “Twin-Based Cyber-Security Control for Swarm With Aggregation–Dispersion Ability.” *2025 37th Chinese Control and Decision Conference (CCDC)*, 2025. [DOI ↗](https://doi.org/10.1109/CCDC65474.2025.11090519)
+3. <span class="pub-status">Conference · 2025</span> Jiacheng Li, **Wenjun Luo**, Jason J. R. Liu, and James Lam. “Twin-Based Cyber-Security Control for Swarm With Aggregation–Dispersion Ability.” *2025 37th Chinese Control and Decision Conference (CCDC)*, pp. 5785–5790, 2025. [DOI ↗](https://doi.org/10.1109/CCDC65474.2025.11090519)
 
 ### Manuscripts under review
 
